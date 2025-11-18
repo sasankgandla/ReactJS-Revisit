@@ -1,0 +1,36 @@
+{
+  "name": "creatingfoldersmanually",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/sasankgandla/ReactJS-Revisit#readme",
+  "bugs": {
+    "url": "https://github.com/sasankgandla/ReactJS-Revisit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sasankgandla/ReactJS-Revisit.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.1"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "browserslist" : {
+    "development": [
+      "last 1 version"
+    ],
+    "production": [
+      "last 1 version",
+      "> 1%",
+      "not dead"
+    ]
+  }
+}
