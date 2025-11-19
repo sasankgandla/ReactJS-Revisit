@@ -1,7 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
 
-const data = [
+export const SWIGGY_IMG_CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+
+export const DATA = [
   {
     info: {
       id: "643179",
@@ -1558,65 +1558,3 @@ const data = [
     },
   },
 ];
-
-const Header = () => {
-  return (
-    <div className="header">
-      <ul>
-        <li>Home</li>
-        <li>Contact Us</li>
-        <li>About Us</li>
-      </ul>
-    </div>
-  );
-};
-
-const RestrauntCard = (props) => {
-  const { name, cuisines,  avgRating, cloudinaryImageId } = props;
-  return (
-    <div className="restraunt-card">
-      <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId} alt="restraunt-logo" />
-      <h3>{name}</h3>
-      <p>{cuisines.join(", ")}</p>
-      <p>{avgRating} stars</p>
-    </div>
-  );
-};
-
-const RestrauntContainer = () => {
-  return (
-    <div className="restraunt-container">
-      {
-        data.map((restaurant) => {
-          return (
-            <RestrauntCard
-              key={restaurant.info.id}
-              {...restaurant.info}
-            />
-          )
-        })
-      }
-    </div>
-  );
-};
-
-const Body = () => {
-  return (
-    <div className="body">
-      <input type="text" placeholder="Search..." />
-      <RestrauntContainer />
-    </div>
-  );
-};
-
-const App = () => {
-  return (
-    <>
-      <Header />
-      <Body />
-    </>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
